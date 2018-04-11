@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.emku.project_summary.veri_gir">
+
+
+    <!-- Veri Girişi Layout  -->
+    <RelativeLayout
+        android:id="@+id/layout_top_enter_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/layout_editText_enter_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <EditText
+                android:id="@+id/editText_enter_data"
+                android:layout_width="match_parent"
+                android:layout_height="310dp"
+                android:background="@android:color/white"
+                android:gravity="top|left"
+                android:padding="10dp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_rate_methods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_editText_enter_data">
+            <RelativeLayout
+                android:id="@+id/layout_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true">
+                <TextView
+                    android:id="@+id/txt_summary_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Özet Oranı: "
+                    android:textSize="14dp"
+                    android:textColor="@android:color/white"
+                    android:layout_centerVertical="true">
+                </TextView>
+                <EditText
+                    android:id="@+id/editText_summary_rate"
+                    android:layout_width="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="#FFFFFF"
+                    android:maxLength="2"
+                    android:background="@android:color/transparent"
+                    android:text="1"
+                    android:layout_toRightOf="@id/txt_summary_rate"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/layout_method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/layout_rate">
+                <TextView
+                    android:id="@+id/textView_method"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="14dp"
+                    android:textColor="@android:color/white"
+                    android:text=" Yöntem:" />
+                <Spinner
+                    android:id="@+id/spinner_enter_data_method"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:popupBackground="#598984"
+                    android:layout_toRightOf="@id/textView_method">
+                </Spinner>
+                <ImageView
+                    android:id="@+id/imageView_enterdata_info"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/info"
+                    android:layout_toRightOf="@id/spinner_enter_data_method"
+                    android:layout_marginRight="10dp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <Button
+            android:id="@+id/img_summary_enter"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Özetle"
+            android:textColor="#FFFFFF"
+            android:overScrollMode="always"
+            android:background="@color/colorbtn"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/layout_rate_methods">
+        </Button>
+    </RelativeLayout>
+    <!-- Veri Girişi Layout Bitiş -->
+
+</RelativeLayout>

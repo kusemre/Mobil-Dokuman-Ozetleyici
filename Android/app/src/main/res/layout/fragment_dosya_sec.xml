@@ -1,0 +1,173 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.emku.project_summary.dosya_sec">
+
+    <RelativeLayout
+        android:id="@+id/layout_pdf_word_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/layout_pdf"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="40dp">
+
+            <ImageView
+                android:id="@+id/img_pdf"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/pdf1">
+            </ImageView>
+
+            <TextView
+                android:layout_toRightOf="@id/img_pdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pdf dosyaları"
+                android:textColor="@android:color/white"
+                android:textSize="15dp"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_word"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_pdf"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="40dp">
+
+            <ImageView
+                android:id="@+id/img_word"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/word">
+            </ImageView>
+
+            <TextView
+                android:layout_toRightOf="@id/img_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Word dosyaları"
+                android:textSize="15dp"
+                android:textColor="@android:color/white"
+                android:layout_centerVertical="true">
+            </TextView>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_txt"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_word"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/img_txt"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/txt">
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Metin dosyaları"
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:textColor="@android:color/white"
+                android:layout_toRightOf="@id/img_txt">
+            </TextView>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layout_rate_methods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/layout_txt">
+            <RelativeLayout
+                android:id="@+id/layout_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="15dp">
+                <TextView
+                    android:id="@+id/textView_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Özet Oranı: "
+                    android:textSize="14dp"
+                    android:textColor="@android:color/white"
+                    android:layout_centerVertical="true">
+                </TextView>
+                <EditText
+                    android:id="@+id/editText_rate"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:inputType="number"
+                    android:textColor="@android:color/white"
+                    android:maxLength="2"
+                    android:background="@android:color/transparent"
+                    android:text="1"
+                    android:layout_toRightOf="@id/textView_rate"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/layout_method"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/layout_rate">
+                    <TextView
+                        android:id="@+id/textView_method"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="14dp"
+                        android:textColor="@android:color/white"
+                        android:text=" Yöntem:" />
+                    <Spinner
+                        android:id="@+id/spinner_file_select_method"
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:popupBackground="#598984"
+                        android:layout_toRightOf="@id/textView_method">
+                    </Spinner>
+                    <ImageView
+                        android:id="@+id/imageView_fileselect_info"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/info"
+                        android:layout_toRightOf="@id/spinner_file_select_method"
+                        android:layout_marginRight="10dp"/>
+
+                </RelativeLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/img_summary_load"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Özetle"
+            android:textColor="@android:color/white"
+            android:background="@color/colorbtn"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_below="@id/layout_rate_methods">
+        </Button>
+    </RelativeLayout>
+</RelativeLayout>
+
+
